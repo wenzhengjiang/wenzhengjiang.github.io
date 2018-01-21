@@ -3,8 +3,8 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://wenzhengjiang.github.io/posts/php-type-checking/</loc>
-    <lastmod>2018-01-17T00:00:00+00:00</lastmod>
+    <loc>https://wenzhengjiang.github.io/archives/</loc>
+    <lastmod>2018-01-21T17:02:33+11:00</lastmod>
   </url>
   
   <url>
@@ -13,38 +13,13 @@
   </url>
   
   <url>
-    <loc>https://wenzhengjiang.github.io/tags/php/</loc>
-    <lastmod>2018-01-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wenzhengjiang.github.io/posts/</loc>
-    <lastmod>2018-01-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wenzhengjiang.github.io/categories/software-engineering/</loc>
-    <lastmod>2018-01-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://wenzhengjiang.github.io/tags/static-analysis/</loc>
-    <lastmod>2018-01-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://wenzhengjiang.github.io/tags/</loc>
-    <lastmod>2018-01-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://wenzhengjiang.github.io/</loc>
-    <lastmod>2018-01-17T00:00:00+00:00</lastmod>
+    <lastmod>2018-01-21T17:02:33+11:00</lastmod>
     <priority>0</priority>
   </url>
   
