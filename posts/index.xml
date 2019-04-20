@@ -1,25 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Wenzheng Jiang</title>
-    <link>https://wenzhengjiang.com/</link>
-    <description>Recent content on Wenzheng Jiang</description>
+    <title>Posts on Wenzheng Jiang</title>
+    <link>https://wenzhengjiang.com/posts/</link>
+    <description>Recent content in Posts on Wenzheng Jiang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 20 Apr 2019 18:54:52 +1000</lastBuildDate>
+    <lastBuildDate>Sat, 20 Apr 2019 14:17:31 +1000</lastBuildDate>
     
-        <atom:link href="https://wenzhengjiang.com/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://wenzhengjiang.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Contact</title>
-      <link>https://wenzhengjiang.com/contact/</link>
-      <pubDate>Sat, 20 Apr 2019 18:54:52 +1000</pubDate>
-      
-      <guid>https://wenzhengjiang.com/contact/</guid>
-      <description>&lt;p&gt;jwzh.hi@gmail.com&lt;/p&gt;
-</description>
-    </item>
     
     <item>
       <title>在Freelancer的三年</title>
@@ -76,29 +66,6 @@
 &lt;p&gt;我已经工作一年半啦。在这一年半里，我经历了各种各样的事情。我觉得我的心态在慢慢开放，对人生的理解也越来越丰富，我希望尝试更多的东西。但同时我也有了紧迫感，因为似乎时间就这样过去了啊，所以我希望能把我的所思所想所经历都给记录下来。&lt;/p&gt;
 
 &lt;p&gt;而且这次我把域名也给买了，某种意义上也是想用这个博客把自己的人生记录起来吧。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Archives</title>
-      <link>https://wenzhengjiang.com/archives/</link>
-      <pubDate>Sun, 21 Jan 2018 17:02:33 +1100</pubDate>
-      
-      <guid>https://wenzhengjiang.com/archives/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://wenzhengjiang.com/about/</link>
-      <pubDate>Sun, 21 Jan 2018 17:02:14 +1100</pubDate>
-      
-      <guid>https://wenzhengjiang.com/about/</guid>
-      <description>&lt;p&gt;LinkedIn: &lt;a href=&#34;https://www.linkedin.com/in/wenzheng-jiang-02235aa0/&#34;&gt;Wenzheng Jiang&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;GitHub: &lt;a href=&#34;https://github.com/wenzhengjiang&#34;&gt;wenzhengjiang&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Goodreads: &lt;a href=&#34;https://www.goodreads.com/user/show/62194958-wenzheng-jiang&#34;&gt;Wenzheng Jiang&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

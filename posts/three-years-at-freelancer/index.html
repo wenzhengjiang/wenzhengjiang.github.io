@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>在Freelancer的三年</title>
+	
+	<meta name="description" content="">
+	<meta name="image" content="">
+	
+	<meta itemprop="name" content="在Freelancer的三年">
+	<meta itemprop="description" content="">
+	<meta itemprop="image" content="">
+	
+	<meta name="og:title" content="在Freelancer的三年">
+	<meta name="og:description" content="">
+	
+	<meta name="og:url" content="https://wenzhengjiang.com/posts/three-years-at-freelancer/">
+	<meta name="og:site_name" content="在Freelancer的三年">
+	<meta name="og:type" content="article">
+	
+	<meta name="article:tag" content="">
+	<link rel="stylesheet" type="text/css" href="https://wenzhengjiang.com/css/style.css">
+	
+	
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-123-45', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+	
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body>
+
+<header>
+	
+	<a href="https://wenzhengjiang.com/" style="float: left;color:#777;"><strong>Wenzheng Jiang</strong></a>
+	
+	&nbsp;&nbsp;<a href="https://wenzhengjiang.com/archives/" style="color:#777;"><strong>Archives</strong></a>&nbsp;&nbsp;<a href="https://wenzhengjiang.com/about/" style="color:#777;"><strong>About</strong></a>&nbsp;&nbsp;<a href="https://wenzhengjiang.com/contact/" style="color:#777;"><strong>Contact</strong></a>
+	
+	
+	
+	<a href="https://wenzhengjiang.com/index.xml" style="color:#777;float: right;"><strong><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></strong></a>
+</header>
+
+
+<div id="loadingMask" style="width: 100%; height: 100%; position: fixed; background: #fff;"></div>
+<script>
+function fadeOut(el) {
+  el.style.opacity = 1;
+
+  var last = +new Date();
+  var tick = function() {
+    el.style.opacity = +el.style.opacity - (new Date() - last) / 80;
+    last = +new Date();
+    
+
+    if (el.style.opacity > 0) {
+      (window.requestAnimationFrame && requestAnimationFrame(tick)) || setTimeout(tick, 16);
+    } else {
+      el.style.display='none';
+    }
+  };
+
+  tick();
+}
+
+function ready(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+         el = document.getElementById('loadingMask');
+         fadeOut(el);
+        var elements = document.querySelectorAll("img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("alt")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("alt"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+
+    } else {
+        document.addEventListener('DOMContentLoaded', fn);
+    }
+}
+window.onload = ready;
+</script>
+
+<div class="content">
+  <h1>在Freelancer的三年 <aside></aside></h1>
+  
+
+<p>最近拿到了Google Tokyo的offer，马上就要离开悉尼，前往东京开始新的生活了。回想起来，自己在Freelancer也已经待了接近三年了。这是一个值的反思的时刻，需要反思的是自己在这三年里到底获得那些成长。</p>
+
+<h2 id="工作">工作</h2>
+
+<p>2016年中旬，我开始正式在Freelancer的Software Infrastructure组工作。我们组做的事情可以说是非常广的，包括edge infrastructure, codebase infrastructure，CI/CD以及实现各种工具和库。我们的目标是让产品团队和运维团队的工程师可以专注完成自己的任务而不需要担心底层的技术细节。而我们组的管理风格基本上是放养式管理，每个组员都有很大的自由去决定自己想做的事情。当时并没有觉得这种工作环境有什么特别的，但是后来慢慢意识到这种自由在一个以盈利为目的的商业公司里其实是非常少见的。</p>
+
+<p>进组之后，第一个引起我兴趣的问题是如何减少业务代码中的bug。公司的业务代码大部分是PHP写的，而PHP作为一个动态，弱类型语言，在大规模软件开发中难以保证代码质量也是众人皆知的事情。如果能对我们的PHP代码进行有效的静态分析，那是可以减少很多线上的bug的。但是不幸的，当时(2017年), 并没有成熟的可以做类型推导的PHP静态分析器, 所以我决定参考<a href="http://www.yinwang.org/resources/pysonar-slides.pdf">王垠的pysonar</a>自己实现一个。实际上并没有花多少时间一个可以跑的版本就做了出来。最后的成品是一个有分析未定义class, function, method, variable, type mismatch, dead code等基本功能的静态分析器。上线之后它对大家的帮助是显而易见，毕竟很大一部分bug现在基本可以完全在部署前解决了。</p>
+
+<p>这份项目经历对我的影响有两个，首先通过完全独立开展调研和实现，然后解决了一个看上去不简单的问题,我的自信心的到了很大提高。其次它让我意识到，我是非常在乎自己项目的影响力的。项目成功后是否会产生直观的影响？它能影响多少人？这些问题是学生时代的我完全没想过的。静态分析器的项目无疑是影响公司的大部分工程师的，而且它对线上bug的减少也是完全可以量化的，那这就是一个我想做的项目。这份思考直接影响到了我第二个项目的选择。</p>
+
+<p>第二个引起我兴趣的问题是如何安全，灵活部署代码。当时我们用的还是最常见的rolling upgrade，每次部署三分之一的server。这样做有两大问题，一个是没有办法快速回滚。如果新的代码出现问题，想要回到上一个版本，只能重新部署一次，而完整部署一次需要20分钟。一个20分钟的outage显然是无法接受的。第二个问题是在rolling upgrade过程中新旧代码会同时运行，当然这个实践中可能很少产生大问题。而有一个方案可以很好的解决这些问题，那就是蓝绿部署。蓝绿部署的思路是很简单的，但是infrastructure的改变常常牵一发而动全身，在实现过程中要考虑的东西很多。比如我们的load blancer本身并不支持蓝绿的切换，service没有容器化，有冗余的service需要简化，service大规模scale  out带来的稳定性问题，如何设计才能使保证部署过程的安全性等等。这些都是需要被关注解决的问题。这个项目仍然是我主导设计完成的，然后也是成功的。</p>
+
+<p>还有一件值得一提的事情是，在18年的下半年，由于<a href="https://github.com/phpstan/phpstan">PHPStan</a>的渐渐成熟，我用PHPStan替换掉了自己写的静态分析器。原因是两个，1. PHPStan的功能上已经超过了我的实现，而且因为用Reflection的原因，性能也要好很多。2. PHPStan是开源的，维护成本是非常小的。假如让我重新选择一次，我应该不会去造那个轮子，因为对于中小规模的公司来说，它的维护成本是在太高了，而收益又是短期内完全看不到的。</p>
+
+<p>前两个项目的成功，为我在公司赢得了很好声誉。我获得了晋升，并且被任命去带领一个重构公司后端的大项目。但由于种种原因,感受到自己的成长速度的减缓，我已经产生了去意，所以也就有了后来面试Google并且离职的事情。</p>
+
+<h2 id="生活">生活</h2>
+
+<p>生活上的成长似乎更加的微妙。从某个角度来看，我对非技术之外的事情的兴趣愈来愈浓厚了。我想人生应该是一个不断探索自身，探索世界的过程。</p>
+
+<p>到底“我”是什么呢？以前我可能认为“我”是由我的情绪和想法构成的，毕竟我的行为是由他们控制的。但是在看了一些<a href="https://www.coursera.org/learn/science-of-meditation/home/welcome">进化心理学</a>和<a href="https://www.goodreads.com/book/show/27414493-the-headspace-guide-to-meditation-mindfulness">冥想</a>的书之后，我的想法变了。因为我的情绪和想法（至少大部分）貌似都不是受我控制而产生的，反而是“我”在时时刻刻收到他们的牵制。从进化心理学的角度来看，这些情绪反应都是由基因，也就是自然选择设计出来的，而人脑海中那些不断冒出来的想法是由脑中的各种<a href="https://www.wikiwand.com/en/Modularity_of_mind">module</a>产生的。人的情绪可以让人的认知产生偏差，人的各种胡思乱想会让人无法专注。而冥想貌似是一个能让自己不受他们干扰的锻炼方法。</p>
+
+<p>另外值得一提的是我今年看过的两本书。<a href="https://www.goodreads.com/book/show/11738806-justice">Justice</a>和<a href="https://www.goodreads.com/book/show/23692271-sapiens">Sapiens</a>。</p>
+
+<p><em>Justice</em> 展示什么才是一个好的思考道德哲学问题方式，那就是提出一个问题 -&gt; 得到一个符合大多数人直觉的回答 -&gt; 分析这个回答背后的本质理念 -&gt; 根据这个理念提出一个自相矛盾的结论 -&gt; 改进这个理念，这样不断重复直到找不自相矛盾的地方。形成一套自洽的道德准则是非常非常难的事情，但是康德认为实现自己的这套道德准则并却遵守它是实现<em>自由</em> 的唯一路径。这个所谓的自由和冥想的最高境<em>Enlightenment</em> 是不是一回事呢？</p>
+
+<p><em>Sapiens</em> 也是一本很有多有趣观点的书。对于动物而言，它们只能通过基因来进步，而人类可以通过思想观念的改变，几百年内发生天翻地覆的变化。一个思想能被不断更新的人才是最像人的人。而书中最重要的观点则是，这些所有的思想，主义，包括人文主义和自由主义，并没有本质上更深刻的含义。它们完全可能在历史的进程中被淘汰。我觉得人肯定要相信某个东西的，但是需要时刻提醒自己的是，自己相信某个东西的唯一理由是因为它可以改善自己的生活，如果这个理由不成立了，那也就没必要相信它了。</p>
+
+<h2 id="未来">未来</h2>
+
+<p>接下来的生活是什么样子呢？这是很难预测的。无论是日本还是Google，我都了解甚少。但是我想一直保持一个open-minded心态。</p>
+
+</div>
+
+
+
+
+<footer>
+	<p>© 2017-2018, all rights reserved.</a>
+</footer>
+</body>
+</html>

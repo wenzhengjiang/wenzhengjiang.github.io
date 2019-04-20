@@ -3,12 +3,38 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://wenzhengjiang.com/contact/</loc>
+    <lastmod>2019-04-20T18:54:52+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wenzhengjiang.com/posts/three-years-at-freelancer/</loc>
+    <lastmod>2019-04-20T14:17:31+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wenzhengjiang.com/posts/why-writing-blog/</loc>
+    <lastmod>2018-01-26T18:06:18+11:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wenzhengjiang.com/archives/</loc>
     <lastmod>2018-01-21T17:02:33+11:00</lastmod>
   </url>
   
   <url>
+    <loc>https://wenzhengjiang.com/about/</loc>
+    <lastmod>2018-01-21T17:02:14+11:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wenzhengjiang.com/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wenzhengjiang.com/posts/</loc>
+    <lastmod>2019-04-20T14:17:31+10:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -19,7 +45,7 @@
   
   <url>
     <loc>https://wenzhengjiang.com/</loc>
-    <lastmod>2018-01-21T17:02:33+11:00</lastmod>
+    <lastmod>2019-04-20T18:54:52+10:00</lastmod>
     <priority>0</priority>
   </url>
   
